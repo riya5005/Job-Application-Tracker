@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: ats-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: atsdb
+      POSTGRES_USER: atsuser
+      POSTGRES_PASSWORD: atspassword
+    ports:
+      - "5432:5432"
+    volumes:
+      - ats_pg_data:/var/lib/postgresql/data
+
+volumes:
+  ats_pg_data:

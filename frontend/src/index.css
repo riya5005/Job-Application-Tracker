@@ -1,0 +1,375 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #f6f7f9;
+  color: #1a1a1a;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px 16px 64px;
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 24px;
+  background: #1e293b;
+  color: white;
+}
+
+.brand {
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.nav-links a {
+  color: #cbd5e1;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+.user-badge {
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.link-btn {
+  background: none;
+  border: none;
+  color: #cbd5e1;
+  cursor: pointer;
+  font-size: 0.95rem;
+  padding: 0;
+}
+
+/* forms */
+.form-page {
+  max-width: 400px;
+  margin: 40px auto;
+  background: white;
+  padding: 28px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.form-page form {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form-page label {
+  font-size: 0.85rem;
+  margin-top: 10px;
+  color: #475569;
+}
+
+input, select, textarea, button {
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+input, select, textarea {
+  padding: 9px 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 5px;
+  margin-top: 3px;
+}
+
+button {
+  margin-top: 16px;
+  padding: 10px 16px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+button:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
+
+.error-text {
+  color: #dc2626;
+  font-size: 0.9rem;
+}
+
+.info-text {
+  color: #16a34a;
+  font-size: 0.9rem;
+}
+
+.hint-text {
+  color: #94a3b8;
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+/* job listing */
+.search-bar {
+  display: flex;
+  flex-direction: row !important;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  flex: 1;
+  margin-top: 0;
+}
+
+.search-bar button {
+  margin-top: 0;
+}
+
+.job-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.job-card {
+  background: white;
+  padding: 18px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.job-card h3 {
+  margin: 0 0 4px;
+}
+
+.job-meta {
+  color: #64748b;
+  font-size: 0.85rem;
+  margin: 0 0 8px;
+}
+
+.job-skills {
+  font-size: 0.85rem;
+  color: #334155;
+}
+
+/* recruiter dashboard */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.data-table th, .data-table td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.data-table button {
+  margin: 0 4px 0 0;
+  padding: 5px 10px;
+  font-size: 0.85rem;
+}
+
+.applicants-section {
+  margin-top: 28px;
+}
+
+.applicant-card {
+  background: white;
+  padding: 14px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* candidate dashboard */
+.applications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.application-row {
+  background: white;
+  padding: 14px 18px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.applied-date {
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+.status-pill {
+  color: white;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.recruiter-note {
+  width: 100%;
+  margin: 4px 0 0;
+  font-size: 0.85rem;
+  color: #475569;
+}
+
+/* ---- added: search, pagination, tags ---- */
+.secondary-btn {
+  background: #e2e8f0;
+  color: #1e293b;
+}
+.secondary-btn:hover {
+  background: #cbd5e1;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+.skill-tag {
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+.pagination button {
+  margin-top: 0;
+}
+
+/* ---- recruiter dashboard extras ---- */
+.applicants-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.applicant-card {
+  flex-direction: column;
+  align-items: stretch !important;
+  gap: 10px;
+}
+.applicant-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.applicant-controls {
+  display: flex;
+  gap: 8px;
+}
+.resume-links {
+  margin-top: 6px;
+  font-size: 0.85rem;
+  display: flex;
+  gap: 12px;
+}
+.link-btn.dark {
+  color: #2563eb;
+  margin: 0;
+  text-decoration: underline;
+}
+.link-btn.dark:hover {
+  background: none;
+}
+.notes-row {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+.notes-row textarea {
+  flex: 1;
+  margin-top: 0;
+}
+.notes-row button {
+  margin-top: 0;
+}
+
+/* ---- candidate dashboard extras ---- */
+.resume-upload {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.file-label {
+  background: #e2e8f0;
+  padding: 5px 12px;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+/* ---- analytics ---- */
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.stat-card {
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  color: #64748b;
+  font-size: 0.85rem;
+}
+.stat-num {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+.chart-box {
+  background: white;
+  padding: 16px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}

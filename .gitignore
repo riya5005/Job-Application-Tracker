@@ -1,0 +1,15 @@
+backend/target/
+backend/data/
+backend/uploads/
+frontend/node_modules/
+frontend/dist/
+frontend/package-lock.json
+.DS_Store
+
+# IDE folders
+.idea/
+.vscode/
+*.iml
+
+# in case you ever add a real .env file for secrets
+.env
